@@ -16,7 +16,7 @@
 </head>
 <body>
 Arduino 8X11 LED Matrix Display<BR>
-Copytight 2011 Usmar A Padow usmpadow@gmail.com<BR>
+Copyright 2011 Usmar A Padow usmpadow@gmail.com<BR>
 I recommed you also read the information on <a href="http://www.nerdkits.com/videos/ledarray2/">NerdKits - DIY Marquee LED Array Display</a> which is what I based this project on and adapted it for the Arduino. It explains more in detail the workings of my project. I wrote the program for the Arduino from scratch. and I also moved the entire display wirering to the rear of the display, making it a more clean display. You can edit the fonts on my project by editing thed progeam, all fonts are ASCII art. I would welcome if someone offers a better font made for my system. I also added voltage limiting resistors.<BR>
 Download the Arduino sketches(software) from <a href="https://github.com/amigojapan/Arduino-LED-Matrix-Display/">https://github.com/amigojapan/Arduino-LED-Matrix-Display/</a><BR>
 Look at the chihiro.pde declarations for how to connect the wires of the display to the pins on the arudino, it is at the beginning of the file<BR>
@@ -46,6 +46,12 @@ Look at the chihiro.pde declarations for how to connect the wires of the display
 <img src="Photo 11-09-17 18 13 09.jpeg" height="500" width="500"><BR>
 <img src="Photo 11-09-17 18 13 14.jpeg" height="500" width="500"><BR>
 <img src="Photo 11-09-17 18 14 39.jpeg" height="500" width="500"><BR>
+The formula for caulculating what resistors you need for the LEDs you use is:<BR>
+(ignore this line if it looks too hard)V_total - Vled_turn_on = R * I<br>
+on the arduino the simplified formula is:
+Resistor(ohms) = (5Volts - Voltage of the LED)/40milliAmpares
+now just replace Voltage of the LED with the voltage of the LEDs you bought and you should be able to calculate the ohms of the resistors you need.
+here is a picture of how I connected the resistors to teh arduino. the yellow and black wires go to the arduino.
 <img src="resistors.jpg" height="500" width="500"><BR>
 <!-- begin htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
