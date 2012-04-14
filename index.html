@@ -15,23 +15,23 @@
 </script>
 </head>
 <body>
-Arduino 8X11 LED Matrix Display(Uses Charlieplexing, which gratly increases the number of LEDs you can use, you can actually build a display with mroe than just 8X11, with an arudino mega, you could control thousands of LEDs)<BR>
+Arduino 8X11 LED Matrix Display(Uses Charlieplexing, which greatly increases the number of LEDs you can use, you can actually build a display with mroe than just 8X11, with an Arudino mega, you could control thousands of LEDs)<BR>
 Copyright 2011 Usmar A Padow usmpadow@gmail.com<BR>
-I recommed you also read the information on <a href="http://www.nerdkits.com/videos/ledarray2/">NerdKits - DIY Marquee LED Array Display</a> which is what I based this project on and adapted it for the Arduino. It explains more in detail the workings of my project. I wrote the program for the Arduino from scratch. and I also moved the entire display wirering to the rear of the display, making it a more clean display. You can edit the fonts on my project by editing thed progeam, all fonts are ASCII art. I would welcome if someone offers a better font made for my system. I also added voltage limiting resistors.<BR>
+I recommed you also read the information on <a href="http://www.nerdkits.com/videos/ledarray2/">NerdKits - DIY Marquee LED Array Display</a> which is what I based this project on and adapted it for the Arduino. It explains more in detail the workings of my project. I wrote the program for the Arduino from scratch. and I also moved the entire display wirering to the rear of the display, making it a more clean display. You can edit the fonts on my project by editing the program, all fonts are ASCII art. I would welcome if someone offers a better font made for my system. I also added voltage limiting resistors.<BR>
 Download the Arduino sketches(software) from <a href="https://github.com/amigojapan/Arduino-LED-Matrix-Display/">https://github.com/amigojapan/Arduino-LED-Matrix-Display/</a><BR>
 Look at the chihiro.pde declarations for how to connect the wires of the display to the pins on the arudino, it is at the beginning of the file<BR>
 <iframe width="420" height="315" src="http://www.youtube.com/embed/OxIHzGRITRo" frameborder="0" allowfullscreen></iframe>
 <img src="1.png"><BR>
 <CENTER>
-Get a thik piece of paper, or a thin piece of cardboard, and cut it to the size you want. I spaced my LEDs 2cm from each other.<BR>
+Get a thick piece of paper, or a thin piece of cardboard, and cut it to the size you want. I spaced my LEDs 2cm from each other.<BR>
 Mark with a ruler and pencil where you will cut the paper<BR>
 <img src="Photo 11-09-14 13 41 39.jpeg" height="500" width="500"><BR>
 Cut all the wholes with a cutter<BR>
 <img src="Photo 11-09-14 13 43 05.jpeg" height="500" width="500"><BR>
-Insert the LEDs, (Make sure you inser one opposite from the other, so that we can do charlieplexing, to understand this better read <a href="http://www.nerdkits.com/videos/ledarray2/">NerdKits - DIY Marquee LED Array Display</a><BR>
+Insert the LEDs, (Make sure you insert one opposite from the other, so that we can do charlieplexing, to understand this better read <a href="http://www.nerdkits.com/videos/ledarray2/">NerdKits - DIY Marquee LED Array Display</a><BR>
 <img src="Photo 11-09-14 13 49 47.jpeg" height="500" width="500"><BR>
-It is faster to take off the "skin" of a wire with a tool that looks like a sissor on the bottom<BR>
-Use a wire wrapping tool(you can buy a cheap one at radio shack), wrapp the wires for the rows<BR>
+It is faster to take off the "skin" of a wire with a tool that looks like a scissor on the bottom<BR>
+Use a wire wrapping tool(you can buy a cheap one at radio shack), wrap the wires for the rows<BR>
 <img src="Photo 11-09-14 14 21 07.jpeg" height="500" width="500"><BR>
 OK, this is how you wrap the wires for the rows and columns:<BR>
 <img src="Photo 11-09-14 14 53 15.jpeg" height="500" width="500"><BR>
@@ -61,9 +61,9 @@ Here are all the rows bent<BR>
 <img src="Photo 11-09-15 23 52 07.jpeg" height="500" width="500"><BR>
 This is the first step to wrap a column<BR>
 <img src="Photo 11-09-16 13 27 14.jpeg" height="500" width="500"><BR>
-This is hte second step to wrap a column<BR>
+This is the second step to wrap a column<BR>
 <img src="Photo 11-09-16 13 27 23.jpeg" height="500" width="500"><BR>
-Close up of a row completed(black wire is columns, yellow wire is rows).Also bend the LED leads in the opposite direction from the other ones. make sure no mettal is touching!<BR>
+Close up of a row completed(black wire is columns, yellow wire is rows).Also bend the LED leads in the opposite direction from the other ones. make sure no metal is touching!<BR>
 <img src="Photo 11-09-16 14 15 43.jpeg" height="500" width="500"><BR>
 Here is the complete rear of the LED display<BR>
 <img src="Photo 11-09-17 18 12 59.jpeg" height="500" width="500"><BR>
@@ -74,12 +74,13 @@ Another close up.<BR>
 Yet Another close up.<BR>
 <img src="Photo 11-09-17 18 14 39.jpeg" height="500" width="500"><BR>
 </CENTER>
-The formula for caulculating what resistors you need for the LEDs you use is:<BR>
+The formula for calculating what resistors you need for the LEDs you use is:<BR>
 (ignore this line if it looks too hard)V_total - Vled_turn_on = R * I<br>
-on the arduino the simplified formula is:<BR>
+on the Arduino the simplified formula is:<BR>
 Resistor(ohms) = (5Volts - Voltage of the LED)/40milliAmpares<BR>
 now just replace Voltage of the LED with the voltage of the LEDs you bought and you should be able to calculate the ohms of the resistors you need.<BR>
-Note: the Voltage of LEDs varries by color, but if you really don't know the voltage of your LEDs, you may want to assume that the voltage is about 2.1V<BR>
+Note: the Voltage of LEDs varies by color, but if you really don't know the voltage of your LEDs, you may want to assume that the voltage is about 2.1V<BR>
+Another useful website, if you dont want to calculate it manually is <a href=http://ledcalc.com>http://ledcalc.com</a>, it is a bit technical<BR>
 here is a picture of how I connected the resistors to the Arduino. the yellow (row) and black (column) wires go to the Arduino.<BR>
 <CENTER>
 <img src="resistors.jpg" height="500" width="500"><BR>
