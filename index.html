@@ -22,38 +22,68 @@ Download the Arduino sketches(software) from <a href="https://github.com/amigoja
 Look at the chihiro.pde declarations for how to connect the wires of the display to the pins on the arudino, it is at the beginning of the file<BR>
 <iframe width="420" height="315" src="http://www.youtube.com/embed/OxIHzGRITRo" frameborder="0" allowfullscreen></iframe>
 <img src="1.png"><BR>
+<CENTER>
+Get a thik piece of paper, or a thin piece of cardboard, and cut it to the size you want. I spaced my LEDs 2cm from each other.<BR>
+Mark with a ruler and pencil where you will cut the paper<BR>
 <img src="Photo 11-09-14 13 41 39.jpeg" height="500" width="500"><BR>
+Cut all the wholes with a cutter<BR>
 <img src="Photo 11-09-14 13 43 05.jpeg" height="500" width="500"><BR>
+Insert the LEDs, (Make sure you inser one opposite from the other, so that we can do charlieplexing, to understand this better read <a href="http://www.nerdkits.com/videos/ledarray2/">NerdKits - DIY Marquee LED Array Display</a><BR>
 <img src="Photo 11-09-14 13 49 47.jpeg" height="500" width="500"><BR>
+It is faster to take off the "skin" of a wire with a tool that looks like a sissor on the bottom<BR>
+Use a wire wrapping tool(you can buy a cheap one at radio shack), wrapp the wires for the rows<BR>
 <img src="Photo 11-09-14 14 21 07.jpeg" height="500" width="500"><BR>
+OK, this is how you wrap the wires for the rows and columns:<BR>
 <img src="Photo 11-09-14 14 53 15.jpeg" height="500" width="500"><BR>
+OK, now we have completed a 4X2 display.<BR>
 <img src="Photo 11-09-14 20 02 51.jpeg" height="500" width="500"><BR>
+This is the final circuit for the 4X2 display<BR>
 <img src="Photo 11-09-14 20 18 13.jpeg" height="500" width="500"><BR>
+Now, repeat the same process, but make an 8X11 Display, it is easier to use white paper(or cardboard) and then paint one side black(or whatever color you want) using spray paint.<BR>
 <img src="Photo 11-09-15 0 56 06.jpeg"  height="500" width="500"><BR>
+This is the rear of the paper<BR>
 <img src="Photo 11-09-15 0 56 25.jpeg"  height="500" width="500"><BR>
+Insert all the LEDs, don't forget to insert one LED opposite from the next LED on each row.<BR>
 <img src="Photo 11-09-15 12 04 46.jpeg" height="500" width="500"><BR>
+This is what the front part of the LED display should look like. It kind of looks complete now.<BR>
 <img src="Photo 11-09-15 12 05 04.jpeg" height="500" width="500"><BR>
+Here is the first wrapping for a row.<BR>
 <img src="Photo 11-09-15 12 26 04.jpeg" height="500" width="500"><BR>
+Wrap a whole row.<BR>
 <img src="Photo 11-09-15 12 58 14.jpeg" height="500" width="500"><BR>
+Wrap all the rows.<BR>
 <img src="Photo 11-09-15 23 12 41.jpeg" height="500" width="500"><BR>
+Close up of the row wrapping<BR>
 <img src="Photo 11-09-15 23 13 09.jpeg" height="500" width="500"><BR>
+Bend the LED leads in this way.(only the left side ones, the ones that have been wrapped for rows)<BR>
 <img src="Photo 11-09-15 23 25 51.jpeg" height="500" width="500"><BR>
+Here are all the rows bent<BR>
 <img src="Photo 11-09-15 23 52 07.jpeg" height="500" width="500"><BR>
+This is the first step to wrap a column<BR>
 <img src="Photo 11-09-16 13 27 14.jpeg" height="500" width="500"><BR>
+This is hte second step to wrap a column<BR>
 <img src="Photo 11-09-16 13 27 23.jpeg" height="500" width="500"><BR>
+Close up of a row completed(black wire is columns, yellow wire is rows).Also bend the LED leads in the opposite direction from the other ones. make sure no mettal is touching!<BR>
 <img src="Photo 11-09-16 14 15 43.jpeg" height="500" width="500"><BR>
+Here is the complete rear of the LED display<BR>
 <img src="Photo 11-09-17 18 12 59.jpeg" height="500" width="500"><BR>
+Close up.<BR>
 <img src="Photo 11-09-17 18 13 09.jpeg" height="500" width="500"><BR>
+Another close up.<BR>
 <img src="Photo 11-09-17 18 13 14.jpeg" height="500" width="500"><BR>
+Yet Another close up.<BR>
 <img src="Photo 11-09-17 18 14 39.jpeg" height="500" width="500"><BR>
+</CENTER>
 The formula for caulculating what resistors you need for the LEDs you use is:<BR>
 (ignore this line if it looks too hard)V_total - Vled_turn_on = R * I<br>
 on the arduino the simplified formula is:<BR>
 Resistor(ohms) = (5Volts - Voltage of the LED)/40milliAmpares<BR>
 now just replace Voltage of the LED with the voltage of the LEDs you bought and you should be able to calculate the ohms of the resistors you need.<BR>
-Note: the Voltage of LEDs varries by color, but if you really dont know the voltage of your LEDs, you may want to assume that the voltage is about 2.1V<BR>
-here is a picture of how I connected the resistors to teh arduino. the yellow (rows) and black (columb) wires go to the Arduino.<BR>
+Note: the Voltage of LEDs varries by color, but if you really don't know the voltage of your LEDs, you may want to assume that the voltage is about 2.1V<BR>
+here is a picture of how I connected the resistors to the Arduino. the yellow (row) and black (column) wires go to the Arduino.<BR>
+<CENTER>
 <img src="resistors.jpg" height="500" width="500"><BR>
+</CENTER>
 <!-- begin htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="http://www.htmlcommentbox.com/static/skins/simple/skin.css" />
